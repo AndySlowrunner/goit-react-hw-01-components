@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import css from 'components/Task1/Card/Card.module.css'
+import css from 'components/Card/Card.module.css'
 
 export const Profile = ({ username, tag, location, avatar, stats }) => (
     <div className={css.profile}>
@@ -11,20 +11,20 @@ export const Profile = ({ username, tag, location, avatar, stats }) => (
                 width="160px"
             />
             <p className={css.name}>{username}</p>
-            <p className={css.tag}>{tag}</p>
+            <p className={css.tag}>@{tag}</p>
             <p className={css.location}>{location}</p>
         </div>
 
         <ul className={css.stats}>
-            <li>
+            <li className={css.item}>
                 <span className={css.label}>Followers</span>
                 <span className={css.quantity}>{stats.followers}</span>
             </li>
-            <li>
+            <li className={css.item}>
                 <span className={css.label}>Views</span>
                 <span className={css.quantity}>{stats.views}</span>
             </li>
-            <li>
+            <li className={css.item}>
                 <span className={css.label}>Likes</span>
                 <span className={css.quantity}>{stats.likes}</span>
             </li>
@@ -37,5 +37,5 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    stats: PropTypes.number.isRequired,
+    stats: PropTypes.object.isRequired,
 };

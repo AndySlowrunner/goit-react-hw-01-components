@@ -4,10 +4,6 @@
     background-color: aliceblue;
 }
 
-ul {
-    list-style: none;
-}
-
 .description {
     display: flex;
     flex-direction: column;
@@ -35,13 +31,14 @@ ul {
 }
 
 .stats {
+    list-style: none;
     display: flex;
     justify-content: space-between;
     padding: 0;
     margin: 10px 0px;
 }
 
-li {
+.item {
     display: flex;
     flex-direction: column;
     justify-content: center;
